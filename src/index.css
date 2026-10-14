@@ -1,0 +1,241 @@
+/* PLATFORM DESIGN DNA (server-assigned identity): palette "Blush Modern" · fonts Readex Pro / Readex Pro. These :root token values ARE this build's identity — keep them when restyling (only an explicit user color request may change them). The header's transparent-state text color is pre-set in --header-fg-transparent. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CHANTAN PREMIUM DESIGN FOUNDATION (2026-06-07)
+   Every Smart Agent app inherits this. Token NAMES match shadcn/ui (so all
+   shadcn components keep working) — the VALUES are upgraded to a refined,
+   premium default (warm-neutral light + deep dark, indigo accent, soft depth,
+   rounder radii). The agent may re-skin these variables per project to apply a
+   chosen "design direction" — keep the names, change the values.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    /* Surfaces — warm, slightly-off-white paper (not flat #fff) */
+    --background: 350 12% 97%;
+    --foreground: 350 25% 12%;
+    --header-fg-transparent: var(--foreground);
+    --primary-on-media: 350 25% 81%;
+    --primary-on-media-foreground: 350 25% 12%;
+
+    --card: 350 12% 97%;
+    --card-foreground: 350 25% 12%;
+
+    --popover: 350 12% 97%;
+    --popover-foreground: 350 25% 12%;
+
+    /* Brand action color — refined indigo (premium, versatile) */
+    --primary: 350 25% 14%;
+    --primary-foreground: 350 15% 97%;
+
+    --secondary: 240 14% 96%;
+    --secondary-foreground: 240 18% 14%;
+
+    --muted: 350 10% 94%;
+    --muted-foreground: 240 8% 44%;
+
+    /* Kept subtle (shadcn uses this for hover backgrounds, NOT the brand color) */
+    --accent: 355 68% 48%;
+    --accent-foreground: 355 40% 97%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 56% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 350 12% 86%;
+    --input: 240 16% 90%;
+    --ring: 350 25% 14%;
+
+    /* Rounder = more premium */
+    --radius: 0.4rem;
+
+    /* Premium soft, layered elevation (used via tailwind boxShadow tokens) */
+    --shadow-sm: 0 1px 2px 0 hsl(240 30% 12% / 0.04), 0 1px 3px 0 hsl(240 30% 12% / 0.06);
+    --shadow-md: 0 2px 4px -1px hsl(240 30% 12% / 0.06), 0 8px 16px -4px hsl(240 30% 12% / 0.08);
+    --shadow-lg: 0 4px 8px -2px hsl(240 30% 12% / 0.07), 0 20px 40px -8px hsl(240 30% 12% / 0.12);
+    --shadow-xl: 0 8px 16px -4px hsl(240 30% 12% / 0.08), 0 32px 64px -12px hsl(240 30% 12% / 0.16);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.10), 0 8px 32px -8px hsl(var(--primary) / 0.35);
+
+    /* Typography — durable premium floor. First builds/redesigns may replace
+       these with a project-specific font system chosen from the prompt, but
+       Arabic/RTL and Latin text never fall to plain browser defaults. */
+    --font-sans: 'Readex Pro', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-display: 'Readex Pro', 'IBM Plex Sans Arabic', 'Readex Pro', ui-sans-serif, system-ui, sans-serif;
+
+    --sidebar-background: 40 30% 98%;
+    --sidebar-foreground: 240 10% 26%;
+    --sidebar-primary: 243 68% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 14% 95%;
+    --sidebar-accent-foreground: 240 18% 14%;
+    --sidebar-border: 240 16% 90%;
+    --sidebar-ring: 243 68% 56%;
+  }
+
+  .dark {
+    /* Deep, slightly-blue ink (not pure black) — premium dark */
+    --background: 240 16% 6%;
+    --foreground: 240 12% 96%;
+
+    --card: 240 15% 9%;
+    --card-foreground: 240 12% 96%;
+
+    --popover: 240 16% 8%;
+    --popover-foreground: 240 12% 96%;
+
+    --primary: 355 60% 62%;
+    --primary-foreground: 240 30% 8%;
+
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 240 12% 96%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 8% 62%;
+
+    --accent: 243 40% 18%;
+    --accent-foreground: 243 80% 84%;
+
+    --destructive: 0 62% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 50% 46%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 10% 17%;
+    --input: 240 10% 17%;
+    --ring: 355 60% 62%;
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.30), 0 1px 3px 0 hsl(0 0% 0% / 0.40);
+    --shadow-md: 0 2px 4px -1px hsl(0 0% 0% / 0.35), 0 8px 16px -4px hsl(0 0% 0% / 0.45);
+    --shadow-lg: 0 4px 8px -2px hsl(0 0% 0% / 0.40), 0 20px 40px -8px hsl(0 0% 0% / 0.55);
+    --shadow-xl: 0 8px 16px -4px hsl(0 0% 0% / 0.45), 0 32px 64px -12px hsl(0 0% 0% / 0.65);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.20), 0 8px 40px -8px hsl(var(--primary) / 0.45);
+
+    --sidebar-background: 240 16% 8%;
+    --sidebar-foreground: 240 10% 90%;
+    --sidebar-primary: 243 75% 68%;
+    --sidebar-primary-foreground: 240 30% 8%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 240 12% 96%;
+    --sidebar-border: 240 10% 17%;
+    --sidebar-ring: 243 75% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Lenis-required override (its own recommended CSS): while Lenis drives the
+     scroll (it adds .lenis to <html>), CSS smooth scrolling must be OFF — the
+     two animate against each other (rubbery/stuck scroll). No effect on sites
+     that never mount <SmoothScroll>. */
+  html.lenis,
+  html.lenis body {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Premium headings — display font, tight tracking, balanced wrapping */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  h1 { letter-spacing: -0.032em; line-height: 1.05; }
+  h2 { letter-spacing: -0.026em; line-height: 1.1; }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.18);
+    color: hsl(var(--foreground));
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.30);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.50); background-clip: padding-box; }
+}
+
+/* ── Premium utility layer — composable helpers the agent can use freely ── */
+@layer components {
+  /* Glassy surface (nav bars, floating cards) */
+  .glass {
+    background-color: hsl(var(--background) / 0.65);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+  }
+
+  /* Subtle premium gradient text for hero headlines */
+  .text-gradient {
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hover-lift interaction for cards/buttons */
+  .hover-lift {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+  /* Scroll-reveal — FAIL-SAFE by design.
+     .reveal is VISIBLE by default. It is only hidden once the boot script in
+     index.html confirms JS is alive and will reveal it (adds html.reveal-js).
+     So if JS errors, is disabled, or prefers-reduced-motion → content always
+     shows. The boot script observes current AND future .reveal nodes (a
+     MutationObserver), so async/DB-rendered content can never get stuck hidden. */
+  .reveal { opacity: 1; }
+  .reveal-js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+  .reveal-js .reveal.is-visible { opacity: 1; transform: none; }
+}
+
+/* PLATFORM ON-MEDIA SCOPE (server-owned — keep this block): add class "on-media" to any wrapper whose backdrop is a photo or a dark scrim (the hero over its photo; the header ONLY while transparent over a full-bleed photo). Inside it the normal tokens render light and a plain <Button> is the on-photo CTA. */
+.on-media {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 100%;
+  --primary: var(--primary-on-media, 0 0% 100%);
+  --primary-foreground: var(--primary-on-media-foreground, 0 0% 8%);
+  --secondary: 0 0% 16%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 16%;
+  --muted-foreground: 0 0% 82%;
+  --accent: 0 0% 20%;
+  --accent-foreground: 0 0% 100%;
+  --border: 0 0% 82%;
+  --input: 0 0% 82%;
+  --ring: 0 0% 100%;
+  color: hsl(var(--foreground));
+}

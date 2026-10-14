@@ -1,0 +1,7 @@
+Order ID,Order Date,Store Name,Name,Phone,City,Street Address,Product Name,Color,Size,Price,Total Quantity,Remarque,Status de confirmation,Societe de livraison,Suivie Remarque,Statut de livraison,Tracking Number,Status Expeditions,VRAI RETURNED,Compaign
+#1001,15/03/2025 14:30,Shopify,Ahmed Benali,0612345678,Casablanca,12 rue des Fleurs Maarif,Casquette Cloud,Noir,M,350,1,Appeler avant livraison,Confirmé,Livcash,,Livré,LC123456,Livré,FALSE,Campagne Mars
+#1001,15/03/2025 14:30,Shopify,Ahmed Benali,0612345678,Casablanca,12 rue des Fleurs Maarif,T-shirt Cloud,Blanc,L,200,2,,Confirmé,Livcash,,Livré,LC123456,Livré,FALSE,Campagne Mars
+#1002,16/03/2025 09:10,WhatsApp,Sara El Idrissi,0661002233,Rabat,45 avenue Hassan Agdal,Casquette Cloud,Beige,M,350,1,,Confirmé,Livcash,,En cours de livraison,LC123457,En transit,FALSE,
+#1003,16/03/2025 18:45,Shopify,Youssef Alaoui,0670112233,Marrakech,Rue 8 Guéliz,Hoodie Cloud,Noir,XL,450,1,,Pas de réponse,,,,,,FALSE,Campagne Hoodie
+#1004,17/03/2025 11:00,Shopify,Imane Tazi,0655443322,Tanger,Bd Mohammed V,T-shirt Cloud,Noir,S,200,1,Client à rappeler,À rappeler,,,,,,FALSE,
+#1005,18/03/2025 16:20,WhatsApp,Omar Berrada,0600998877,Fès,Quartier Atlas,Casquette Cloud,Noir,M,350,1,,Annulé,,,,,,FALSE,
